@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ctfwieiswie/static/css/main.247c1ef2.css",
+    "main.js": "/ctfwieiswie/static/js/main.09e7811b.js",
+    "static/js/453.69f8b84f.chunk.js": "/ctfwieiswie/static/js/453.69f8b84f.chunk.js",
+    "index.html": "/ctfwieiswie/index.html",
+    "main.247c1ef2.css.map": "/ctfwieiswie/static/css/main.247c1ef2.css.map",
+    "main.09e7811b.js.map": "/ctfwieiswie/static/js/main.09e7811b.js.map",
+    "453.69f8b84f.chunk.js.map": "/ctfwieiswie/static/js/453.69f8b84f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.247c1ef2.css",
+    "static/js/main.09e7811b.js"
+  ]
+}
