@@ -34,10 +34,11 @@ const TeamMemberCard = ({ member }) => {
       <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-70 p-4 text-center text-white opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
         <h3 className="text-lg font-bold">{member.Name}</h3>
         {title && <p className="text-sm">{title}</p>}
-        <div className="mt-2 border-t border-gray-400 pt-2 text-xs">
-          {member.Email && <p>{member.Email}</p>}
-          {member.Phone && <p>{member.Phone}</p>}
-        </div>
+        {member.Email && (
+          <div className="mt-2 border-t border-gray-400 pt-2 text-xs">
+            <p>{member.Email}</p>
+          </div>
+        )}
       </div>
     </a>
   );
