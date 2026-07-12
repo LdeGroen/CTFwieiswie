@@ -1,22 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
-// Productie-backend; via REACT_APP_API_URL override-baar lokaal.
-const API_URL = process.env.REACT_APP_API_URL || 'https://backend.cafetheaterfestival.nl';
-
-// Hulp: standaard ophalen van een publiek endpoint, met een 15s timeout
-// zodat een hangende server niet de hele app blokkeert.
-async function fetchPublic(path) {
-  const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), 15000);
-  try {
-    const res = await fetch(`${API_URL}${path}`, { signal: ctrl.signal, headers: { Accept: 'application/json' } });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const json = await res.json();
-    return json.data || [];
-  } finally {
-    clearTimeout(timer);
-  }
-}
+import { fetchPublic } from 'ctf-ui/api';
 
 // Component voor een individueel teamlid
 const TeamMemberCard = ({ member }) => {
